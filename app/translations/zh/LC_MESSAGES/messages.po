@@ -1,0 +1,423 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-22 19:29+0800\n"
+"PO-Revision-Date: 2023-12-29 16:32+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: app/__init__.py:46
+msgid "Please log in to access this page."
+msgstr "访问它需要登录"
+
+#: app/auth/email.py:7
+msgid "[MicroBuluo] Reset Your Password"
+msgstr "[微部落]重置你的密码"
+
+#: app/auth/email.py:17
+msgid "[MicroBuluo] Confirm Your Account"
+msgstr "[微部落]确认你的账号"
+
+#: app/auth/forms.py:8 app/auth/forms.py:14 app/main/forms.py:11
+msgid "Username"
+msgstr "用户名"
+
+#: app/auth/forms.py:9 app/auth/forms.py:19 app/auth/forms.py:40
+msgid "Password"
+msgstr "密码"
+
+#: app/auth/forms.py:10
+msgid "Remember Me"
+msgstr "记住我"
+
+#: app/auth/forms.py:11 app/auth/routes.py:56 app/templates/auth/login.html:5
+msgid "Sign In"
+msgstr "登录"
+
+#: app/auth/forms.py:16
+msgid "Usernames must have only letters, numbers, dots or underscores"
+msgstr "用户名只能有字母、数字、点或下划线"
+
+#: app/auth/forms.py:18 app/auth/forms.py:36
+msgid "Email"
+msgstr "邮箱"
+
+#: app/auth/forms.py:21 app/auth/forms.py:42
+msgid "Repeat Password"
+msgstr "重复密码"
+
+#: app/auth/forms.py:23 app/auth/routes.py:79
+#: app/templates/auth/register.html:5
+msgid "Register"
+msgstr "注册"
+
+#: app/auth/forms.py:28 app/main/forms.py:24
+msgid "Please use a different username."
+msgstr "请使用其他用户名"
+
+#: app/auth/forms.py:33
+msgid "Please use a different email address."
+msgstr "请使用其他邮箱地址"
+
+#: app/auth/forms.py:37 app/auth/forms.py:44
+msgid "Request Password Reset"
+msgstr "找回密码"
+
+#: app/auth/routes.py:34
+msgid "A new confirmation email has been sent to you by email."
+msgstr "已通过电子邮件向您发送了一封新的确认电子邮件。"
+
+#: app/auth/routes.py:49
+msgid "Invalid username or password"
+msgstr "无效的用户或密码"
+
+#: app/auth/routes.py:75
+msgid "A confirmation email has been sent to you by email."
+msgstr "已通过电子邮件向您发送了一封确认电子邮件。"
+
+#: app/auth/routes.py:92
+msgid "Check your email for the instructions to reset your password"
+msgstr "检查你的邮箱以便重设你的密码"
+
+#: app/auth/routes.py:105
+msgid "You have confirmed your account. Thanks!"
+msgstr "您已确认您的帐户。谢谢"
+
+#: app/auth/routes.py:107
+msgid "The confirmation link is invalid or has expired."
+msgstr "确认链接无效或已过期。"
+
+#: app/auth/routes.py:121
+msgid "Your password has been reset."
+msgstr "密码修改成功！"
+
+#: app/main/forms.py:12
+msgid "About me"
+msgstr "个性签名"
+
+#: app/main/forms.py:14 app/main/forms.py:59 app/main/forms.py:66
+#: app/main/forms.py:71
+msgid "Submit"
+msgstr "提交"
+
+#: app/main/forms.py:58
+msgid "What's on you mind?"
+msgstr "你有什么想法？"
+
+#: app/main/forms.py:62
+msgid "Welcome to Review."
+msgstr "发评论"
+
+#: app/main/forms.py:69
+msgid "Message"
+msgstr "消息"
+
+#: app/main/forms.py:74 app/main/routes.py:52
+msgid "Search"
+msgstr "搜索"
+
+#: app/main/routes.py:34
+msgid "An export task is currently in progress"
+msgstr "当前进度为导入任务"
+
+#: app/main/routes.py:36
+msgid "Exporting posts..."
+msgstr "正在导出帖子"
+
+#: app/main/routes.py:59 app/templates/index.html:22
+msgid "Home"
+msgstr "主页"
+
+#: app/main/routes.py:69 app/main/routes.py:95
+msgid "Your post is now live!"
+msgstr "你发布了一条新帖子"
+
+#: app/main/routes.py:85 app/templates/base.html:31
+msgid "Personal Homepage"
+msgstr "个人主页"
+
+#: app/main/routes.py:168
+msgid "Your changes have been saved."
+msgstr "你更改保存了"
+
+#: app/main/routes.py:173
+msgid "Edit Profile"
+msgstr "编辑资料"
+
+#: app/main/routes.py:180 app/main/routes.py:195
+#, python-format
+msgid "User %(username)s not found."
+msgstr "用户 %(username)s 没有找到。"
+
+#: app/main/routes.py:183
+msgid "You connot follow yourself!"
+msgstr "不能关注自己！"
+
+#: app/main/routes.py:187
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "你关注了 %(username)s!"
+
+#: app/main/routes.py:198
+msgid "You cannot unfollow yourself!"
+msgstr "你不能取消关注自己"
+
+#: app/main/routes.py:202
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "取消关注%(username)s"
+
+#: app/main/routes.py:217
+msgid "Your message has been sent."
+msgstr "消息发送成功！"
+
+#: app/main/routes.py:219
+msgid "Send Message"
+msgstr "发送消息"
+
+#: app/main/routes.py:301
+msgid "Your comment has been published."
+msgstr "你的评论以及发送"
+
+#: app/templates/_footer.html:5 app/templates/_macros.html:37
+msgid "Newer posts"
+msgstr "上一页"
+
+#: app/templates/_footer.html:11 app/templates/_macros.html:42
+msgid "Older posts"
+msgstr "下一页"
+
+#: app/templates/_post.html:28
+msgid "Permalink"
+msgstr "详细链接"
+
+#: app/templates/_post.html:33
+msgid "Edit"
+msgstr "编辑"
+
+#: app/templates/_post.html:37
+msgid "Edit [Admin]"
+msgstr "管理编辑"
+
+#: app/templates/_post.html:42 app/templates/post.html:9
+msgid "Comments"
+msgstr "评论区"
+
+#: app/templates/base.html:6 app/templates/base.html:24
+msgid "MicroBuluo"
+msgstr "微部落"
+
+#: app/templates/base.html:8
+msgid "Welcome to MicroBuluo"
+msgstr "欢迎来到微部落"
+
+#: app/templates/base.html:30
+msgid "Public Homepage"
+msgstr "公共主页"
+
+#: app/templates/base.html:52
+msgid "Login"
+msgstr "登录"
+
+#: app/templates/base.html:57 app/templates/messages.html:4
+msgid "Messages"
+msgstr "消息"
+
+#: app/templates/base.html:68
+msgid "Moderate Comments"
+msgstr "评论管理"
+
+#: app/templates/base.html:70
+msgid "Profile"
+msgstr "个人信息"
+
+#: app/templates/base.html:71
+msgid "Logout"
+msgstr "退出"
+
+#: app/templates/index.html:23
+msgid "Explore"
+msgstr "探索"
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr "最新的信息"
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr "过去的信息"
+
+#: app/templates/moderate.html:6
+msgid "Comment Moderation"
+msgstr "评论协管"
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr "搜索结果"
+
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr "发送消息给%(recipient)s"
+
+#: app/templates/user.html:8
+msgid "User:"
+msgstr "用户名:"
+
+#: app/templates/user.html:12 app/templates/user_popup.html:9
+#, python-format
+msgid "%(count)d followers"
+msgstr "%(count)d 粉丝"
+
+#: app/templates/user.html:12 app/templates/user_popup.html:9
+#, python-format
+msgid "%(count)d following"
+msgstr "%(count)d 关注"
+
+#: app/templates/user.html:14
+msgid "Last seen on:"
+msgstr "上次登录"
+
+#: app/templates/user.html:20
+msgid "Export your posts"
+msgstr "导出你的帖子"
+
+#: app/templates/user.html:29
+msgid "Send private message"
+msgstr "私信"
+
+#: app/templates/user.html:35
+msgid "Edit your profile"
+msgstr "编辑资料"
+
+#: app/templates/user.html:40 app/templates/user_popup.html:15
+msgid "Follow"
+msgstr "关注"
+
+#: app/templates/user.html:45 app/templates/user_popup.html:22
+msgid "Unfollow"
+msgstr "取消关注"
+
+#: app/templates/user.html:80
+msgid "following"
+msgstr "关注"
+
+#: app/templates/user_popup.html:7
+msgid "Last seen on"
+msgstr "上次登录"
+
+#: app/templates/auth/login.html:13
+msgid "New User?"
+msgstr "新用户？"
+
+#: app/templates/auth/login.html:13
+msgid "Click to Register!"
+msgstr "点击注册！"
+
+#: app/templates/auth/login.html:15
+msgid "Forgot Your Password?"
+msgstr "忘记自己的密码？"
+
+#: app/templates/auth/login.html:16
+msgid "Click to Reset It"
+msgstr "点击重置它"
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "重置你的密码"
+
+#: app/templates/auth/reset_password_request.html:5
+msgid "Reset Password"
+msgstr "重置密码"
+
+#: app/templates/auth/unconfirmed.html:4
+msgid "Confirm account！"
+msgstr "确认账户！"
+
+#: app/templates/auth/unconfirmed.html:8
+msgid "Click to confirm"
+msgstr "点击重置它"
+
+#: app/templates/email/confirm.html:4 app/templates/email/reset_password.html:4
+msgid "Dear"
+msgstr "亲爱的"
+
+#: app/templates/email/confirm.html:6
+msgid "Welcome to MicroBuluo!"
+msgstr "微部落"
+
+#: app/templates/email/confirm.html:8 app/templates/email/reset_password.html:8
+msgid "click here"
+msgstr "点击这里"
+
+#: app/templates/email/confirm.html:11
+msgid "To confirm your account please click on the following link:"
+msgstr "要确认您的帐户，请单击以下链接："
+
+#: app/templates/email/confirm.html:13
+#: app/templates/email/reset_password.html:14
+msgid "Sincerely,"
+msgstr "真诚的，"
+
+#: app/templates/email/confirm.html:14
+#: app/templates/email/reset_password.html:15
+msgid "The MicroBuluo Team"
+msgstr "微部落团队"
+
+#: app/templates/email/confirm.html:15
+msgid "Note: replies to this email address are not monitored."
+msgstr "注意：对该电子邮件地址的回复不受监控。"
+
+#: app/templates/email/reset_password.html:6
+msgid "To reset your password"
+msgstr "重置你的密码"
+
+#: app/templates/email/reset_password.html:11
+msgid ""
+"Alternatively, you can paste the following link in your browser's address"
+" bar:"
+msgstr "或者，您可以将以下链接粘贴到浏览器的地址中"
+
+#: app/templates/email/reset_password.html:13
+msgid "If you have not requested a password reset simply ignore this message."
+msgstr "如果你不想重置密码，请忽略这封信"
+
+#: app/templates/errors/403.html:4
+msgid "No Permission"
+msgstr "没有权限"
+
+#: app/templates/errors/403.html:5 app/templates/errors/404.html:5
+#: app/templates/errors/500.html:6
+msgid "Back"
+msgstr "返回"
+
+#: app/templates/errors/404.html:4
+msgid "File Not Found"
+msgstr "没有找到文件"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "出现意外错误"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "已通知管理员。很抱歉给您带来不便！"
+
+#~ msgid "Congratulations, you are now a registered user!"
+#~ msgstr "恭喜你注册新用户！"
+
+#~ msgid "Say something"
+#~ msgstr "说些什么"
+

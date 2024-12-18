@@ -1,0 +1,246 @@
+@keyframes show {
+  0% {
+      opacity: 0
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+@keyframes jump {
+  0% {
+      opacity: 1;
+      transform: translate(0,0)
+  }
+
+  100% {
+      opacity: .5;
+      transform: translate(0,-5px)
+  }
+}
+
+@keyframes slide {
+  0% {
+      opacity: 1;
+      margin-left: 0
+  }
+
+  100% {
+      opacity: 0;
+      margin-left: 100%
+  }
+}
+
+a {
+  background: 0 0
+}
+
+a:focus {
+  outline: dotted thin
+}
+
+a:active,a:hover {
+  outline: 0
+}
+
+/*
+body,html {
+  font-size: 14px;
+  height: 100%
+}
+*/
+
+b {
+  font-weight: 500
+}
+
+header {
+  color: #676f75;
+  margin: 0 auto;
+  padding: 20px 15px 0;
+  text-align: right;
+  width: 345px
+}
+
+header img,.right {
+  float: right
+}
+
+header img {
+  border: 1px solid #676f75;
+  border-radius: 100%;
+  height: 100px;
+  margin-left: 25px;
+  width: 100px
+}
+
+h1 {
+  margin-bottom: 10px;
+  margin-top: 15px
+}
+
+h2 {
+  margin-top: 10px;
+  opacity: .85
+}
+
+.emoji {
+  font-size: 25px;
+  vertical-align: middle
+}
+
+.outer {
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 20px 0 40px;
+  width: 355px
+}
+
+.outer .item {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
+  display: table;
+  margin: 15px 0;
+  overflow: hidden;
+  transition: width .5s ease,height .5s ease,color .5s ease-in
+}
+
+.outer .item.wait {
+  height: 33px;
+  width: 15px
+}
+
+.outer .item p {
+  color: #6b7c93;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 8px 15px
+}
+
+.outer .item p.hide,.outer .item.btn p,.outer .item.other button {
+  display: none
+}
+
+.outer .item.other {
+  background: #40a1f1;
+  box-shadow: none;
+  height: 40px;
+  transition: all 1s
+}
+
+.outer .item.other p {
+  color: #fff
+}
+
+.outer .item.answer {
+  display: none;
+  min-height: 40px
+}
+
+.outer .item.btn {
+  background: 0 0;
+  box-shadow: none;
+  display: block;
+  margin: 20px 0;
+  padding: 3px 0 7px
+}
+
+.outer .item a {
+  box-shadow: inset 0 -1px 0 0 #fff,inset 0 -3px 0 0 #40a1f1;
+  color: #6b7c93;
+  font-weight: 400;
+  padding-bottom: 1px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff,-1px 1px 0 #fff,2px 0 0 #fff,-2px 0 0 #fff
+}
+
+.outer .item a:focus,.outer .item a:hover {
+  color: #40a1f1
+}
+
+.outer .item button {
+  background: #40a1f1;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,.35);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 12px;
+  transition: all .5s cubic-bezier(0,0,.2,1),box-shadow .15s ease-in-out
+}
+
+.outer .item button:focus,.outer .item button:hover {
+  box-shadow: 2px 3px 10px 0 rgba(0,0,0,.25)
+}
+
+.outer .item button+button.move {
+  margin-left: 20px
+}
+
+@media(min-width: 768px) {
+  .outer,header {
+      width:510px
+  }
+
+  .header {
+      padding-right: 0
+  }
+}
+
+.show {
+  animation: show 1.5s
+}
+
+.jump {
+  animation: jump .5s alternate infinite
+}
+
+.slide-away {
+  animation: slide 1s
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "huxiaobo-gdh1e91397a5f211c5",
+      "PingFang SC", "Microsoft Yahei", sans-serif;
+  }
+  
+  main {
+    background: #2f3542;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  /*
+  h1 {
+    color: #3f61ea;
+    font-size: 5em;
+    font-weight: 300;
+  }
+  */
+  span.mark {
+    border-right: 2px solid rgb(0, 0, 0);
+    animation: blink 0.6s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(11, 11, 11);
+    }
+  }

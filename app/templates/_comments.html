@@ -1,0 +1,44 @@
+<table class="table table-hover">
+    <tr>
+        <td width="70px">
+            <a>
+                <img style="width: 40px;height: 40px;" src="{{ comment.author.avatar(70) }}" />
+            </a>
+        </td>
+        <td> 
+            {% if comment.disabled %}
+            <p><i>This comment has been disabled by a moderator.</i></p>
+            {% endif %}
+            <a class="user_popup":w >
+                {{ comment.author.username }}
+            </a>
+   
+            <br>
+        {% if moderate or not comment.disabled %}
+        {% if comment.body_html %}
+        {{ comment.body_html | safe }}
+        {% else %}
+        {{ comment.body }}
+        {% endif %}
+          {% endif %}
+        <div class="post-footer">
+            {% if moderate %}
+            <br>
+            {% if comment.disabled %}
+            <a class="btn btn-default btn-xs" href="{{ url_for('.moderate_enable',
+            id=comment.id, page=page) }}">Enable</a>
+            {% else %}
+            <a class="btn btn-danger btn-xs" href="{{ url_for('.moderate_disable',
+            id=comment.id, page=page) }}">Disable</a>
+            {% endif %}
+           {% endif %}
+
+            </div>
+        </td>
+      
+    </tr> 
+</table>
+
+
+
+

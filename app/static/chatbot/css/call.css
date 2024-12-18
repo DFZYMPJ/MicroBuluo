@@ -1,0 +1,84 @@
+ .call_page{
+         margin: 0px;
+         padding: 0px;
+         display: none;
+         align-items: center;
+         justify-content: center;
+         background: black;
+         opacity: 0.9;
+         z-index: 1000000;
+      }
+      section{
+         position: fixed;
+         top: 5%;
+         display: flex;
+         z-index:1000;
+         justify-content: center;
+         align-items: center;
+         background-color: black;
+         height: 15%;
+         width: 90%;
+         border-radius: 30px;
+      }
+      .header{
+        position: absolute;
+        margin-top:-3%;
+        color: #756c67;
+        text-align: right;
+        width: 345px;
+        float:left;
+      }
+
+      .call{
+         position: relative;
+         margin-right: 25%;
+         background: greenyellow;
+         color: white;
+         font-size: 35px;
+         font-weight: bold;
+         width: 50px;
+         height:50px;
+         border-radius: 100%;
+         border: solid 5px rgb(219, 247, 176);
+         animation: anim 2s ease-in infinite, vibration 2s ease-in infinite;
+      }
+
+      .call_end{
+         position: relative;
+         margin-left: 25%;
+         background: rgb(255, 47, 47);
+         color: white;
+         font-size: 35px;
+         font-weight: bold;
+         width: 50px;
+         height: 50px;
+         border-radius: 100%;
+         border: solid 5px rgb(255, 14, 50);
+      }
+    
+      .icon{
+         position: absolute;
+         top: 8px;
+         left: 8px;
+      }
+      @keyframes anim {
+         0% {
+            box-shadow: 0 1px 0 4px #ffffff;
+         }
+         10%{
+            box-shadow: 0 1px 0 8px rgb(85, 255, 0)
+         }
+         25% {
+            box-shadow: 0 1px 0 12px rgb(196, 255, 128), 0 1px 0 16px rgb(51, 209, 61);
+         }
+         50% {
+            box-shadow: 0 2px 5px 10px rgb(51, 255, 109),  0 2px 5px 23px rgba(248, 248, 255, 1);
+         }
+      }
+      @keyframes vibration {
+         0% { transform: rotate(0deg); }
+         25% { transform: rotate(20deg); }
+         50% { transform: rotate(0deg); }
+         75% { transform: rotate(-15deg); }
+         100% { transform: rotate(0deg); }
+      }

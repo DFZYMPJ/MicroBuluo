@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='chatbot/css/botui.min.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static',filename='chatbot/css/botui-theme-default.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static',filename='chatbot/css/type.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static',filename='chatbot/css/call.css')}}" />
+        <!--<link rel="stylesheet" href="{{url_for('static',filename='chatbot/css/bootstrap.css')}}" />-->
+          <!-- google Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <body>
+
+        <div style="height: 100%;">
+        <!--用户发起视频通话呼弹窗-->
+        <div class="call_page" id="call">
+          <section>
+          <div class="header">
+              <!--<img src="static/svg/face.svg" alt="DFZYMPJ's Picture">-->
+              <h3 align="center" id="videoNickname">FaceChat</h3>
+          </div>
+            <div class= "call">
+              <span id="videocam" class="material-icons pt-2 icon">
+                  videocam
+              </span>
+            </div>
+       
+       <div class= "call_end">
+         <span id="call_end" class="material-icons pt-2 icon">
+             call_end
+         </span>
+       </div>
+       </section>
+     </div>
+
+
+          <header>
+            <img src="static/svg/face.svg" alt="DFZYMPJ's Picture">
+            <h1>FaceChat</h1>
+            <h2 itemprop="jobTitle"> <span
+              id="text"
+              data-text='["面对面短信","及时分享","信息传输"]'
+            ><!-- 闪烁的光标 -->
+            <span class="mark"></span>
+          </span></h2>
+          </header>
+
+            <!--聊天页面-->
+            <div class="botui-app-container" id="ChatContent">
+                <bot-ui>
+                </bot-ui>
+            </div>
+
+
+            <!--Botui框架-->
+            <script src="{{url_for('static',filename='chatbot/js/vue.min.js')}}"></script>
+            <script src="{{url_for('static',filename='chatbot/js/botui.js')}}"></script>
+            <!--设计面对面脚本-->
+            <script src="{{url_for('static',filename='chatbot/js/jquery-1.11.1.js')}}"></script>
+            <script src="{{url_for('static',filename='chatbot/js/socket.io.js')}}"></script>
+            <script type="text/javascript" src="{{url_for('static',filename='chatbot/js/index.js')}}"></script>
+            
+            <!--打字效果JS脚本-->
+            <script type="text/javascript" src="{{url_for('static',filename='chatbot/js/type.js')}}"></script>
+            </div>
+        </body>
+</html>

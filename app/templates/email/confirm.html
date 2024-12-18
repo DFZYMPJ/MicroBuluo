@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <body>
+        <p>{{ _('Dear') }} {{ user.username }},</p>
+        <p>
+            {{ _('Welcome to MicroBuluo!') }}
+            <a href="{{ url_for('auth.confirm', token=token, _external=True) }}">
+                {{ _('click here') }}
+            </a>.
+        </p>
+        <p>{{ _("To confirm your account please click on the following link:") }}</p>
+        <p>{{ url_for('auth.confirm', token=token, _external=True) }}</p>
+        <p>{{ _('Sincerely,') }}</p>
+        <p>{{ _('The MicroBuluo Team') }}</p>
+        <p>{{ _('Note: replies to this email address are not monitored.') }}</p>
+    </body>
+</html>

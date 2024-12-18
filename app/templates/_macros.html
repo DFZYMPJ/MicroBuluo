@@ -1,0 +1,46 @@
+{% macro pagination_widget(pagination, endpoint) %}
+<ul class="pagination">
+ <li class="page-item {% if not pagination.has_prev %} disabled{% endif %}">
+ <a class="page-link" href="{% if pagination.has_prev %}{{ url_for(endpoint,
+ page = pagination.page - 1, **kwargs) }}{% else %}#{% endif %}">
+ &laquo;
+ </a>
+ </li>
+ {% for p in pagination.iter_pages() %}
+ {% if p %}
+ {% if p == pagination.page %}
+ <li class="active page-item">
+ <a class="page-link" href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+ </li>
+ {% else %}
+ <li>
+ <a class="page-link" href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+ </li>
+ {% endif %}
+ {% else %}
+ <li class="disabled"><a class="page-link" href="#">&hellip;</a></li>
+ {% endif %}
+ {% endfor %}
+ <li class="page-item {% if not pagination.has_next %} disabled{% endif %}">
+ <a href="{% if pagination.has_next %}{{ url_for(endpoint,
+ page = pagination.page + 1, **kwargs) }}{% else %}#{% endif %}">
+ &raquo;
+ </a>
+ </li>
+</ul>
+{% endmacro %}
+
+ <!--  <nav aria-label="Post navigation">
+        <ul class="pagination">
+            <li class="page-item{% if not prev_url %} disabled{% endif %}">
+                <a class="page-link" href="{{ prev_url }}">
+                    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+                </a>
+            </li>
+            <li class="page-item{% if not next_url %} disabled{% endif %}">
+                <a class="page-link" href="{{ next_url }}">
+                    {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>-->  

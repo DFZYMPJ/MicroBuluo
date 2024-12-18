@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+	<table class="table table-hover">
+		<tr>
+			<td width="180px"><img src="{{ user.avatar(256) }}"></td>
+			<td>
+				<h3>{{ _('User:') }}{{ user.username }}</h3>
+				{% if user.about_me %}
+					<p>{{ user.about_me }}</p>
+				{% endif %}
+				<p>{{ _('%(count)d followers', count=user.followers_count()) }}, {{ _('%(count)d following', count=user.following_count()) }}</p>
+				{% if user.last_seen %}
+					<p>{{ _('Last seen on:') }} {{ moment(user.last_seen).fromNow() }}</p>
+				{% endif %}
+				
+				{% if not current_user.get_task_in_progress('export_posts') %}
+                <p>
+                    <a href="{{ url_for('main.export_posts') }}">
+                        {{ _('Export your posts') }}
+                    </a>
+                </p>
+                
+                {% endif %}
+				{% if user != current_user %}
+                <p>
+                    <a href="{{ url_for('main.send_message',
+                                        recipient=user.username) }}">
+                        {{ _('Send private message') }}
+                    </a>
+                </p>
+                {% endif %}
+				{% if user == current_user %}
+					<p>
+						<a href="{{ url_for('main.edit_profile') }}">{{ _('Edit your profile') }}</a>
+					</p>
+
+				{% elif not current_user.is_following(user) %}
+					<p>
+						<a href="{{ url_for('main.follow', username=user.username) }}">{{ _('Follow') }}</a>
+					</p>
+
+				{% else %}
+					<p>
+						<a href="{{ url_for('main.unfollow', username=user.username) }}">{{ _('Unfollow') }}</a>
+					</p>
+				{% endif %}
+			</td>
+		</tr>
+	</table>
+	<div class="row">
+		<div class="col-xs-12 col-md-8">
+			{% for post in posts %}
+			{% include '_post.html' %}
+			{% endfor%}
+		</div>
+		<div class="col-xs-6 col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					{% for follow in user.following_list()%}
+					<table class="table table-hover">
+						<tr>
+							<td width="70px">
+							   
+								<a>
+									<img style="width: 40px;height: 40px;" src="{{follow.avatar(128)}}" />
+								</a>
+						   
+							</td>
+							<td> 
+								
+								<a class="user_popup":w href="{{url_for('main.user',username = follow.username)}}">{{follow.username}}</a>
+								<p>{{follow.about_me}}</p>
+							</td>
+						  
+						</tr> 
+					</table>
+					{% endfor %}
+				</div>
+				<div class="panel-footer">{{_('following')}}</div>
+			  </div>
+		</div>
+	  </div>
+	
+
+	{% include '_footer.html' %}
+{% endblock%}
+
