@@ -40,6 +40,6 @@
 
 电邮地址: [foxmail2@qq.com](mailto:foxmail2@qq.com)
 
-QQ: 1821628025  <del>微信号: zyp_FTZOTOF_hcc</del>
+QQ: 1821628025  <del>微信号: DFZYMPJ</del>
 
 官方论坛:[微部落](http://thegoddess.tpddns.cn)
