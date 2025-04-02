@@ -42,4 +42,4 @@
 
 QQ: 1821628025  <del>微信号: DFZYMPJ</del>
 
-官方论坛:[微部落](http://thegoddess.tpddns.cn:5000)
+官方论坛:[微部落](http://dfzympj.tpddns.cn:5000)
