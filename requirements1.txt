@@ -1,0 +1,9 @@
+werkzeug==2.3.7
+jinja2==3.1.4
+flask-moment==1.0.6
+flask-babel==4.0.0
+flask-sqlalchemy==3.1.1
+sqlalchemy==2.0.25
+flask-socketio==5.6.1
+flask-wtf==1.2.1
+coverage
